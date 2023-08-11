@@ -1,0 +1,33 @@
+
+.writer {
+    /* display: inline-block; */
+  }
+  
+  .writer-text {
+    display: inline-block;
+    overflow: hidden;
+    animation: typing 1.8s steps(30, end), blink .75s step-end infinite;
+    white-space: nowrap;
+    padding-bottom: 0px;
+    padding-right: 10px;
+    border-right: 10px solid rgb(var(--foreground-rgb));;
+    box-sizing: border-box;
+  }
+  
+  @keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 100% 
+    }
+  }
+  
+  @keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: rgb(var(--foreground-rgb));; 
+    }
+  }
