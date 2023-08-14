@@ -5,10 +5,6 @@ import Image from 'next/image';
 
 const ScrollButton: React.FC = () => {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     const handleScroll = () => {
         window.scrollTo({
             top: window.innerHeight,
