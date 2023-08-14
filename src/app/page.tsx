@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { HERO_SPLASH, SIGN_IN_HINT } from "./constants";
+import React from "react";
+import { HERO_SPLASH, SIGN_IN_HINT } from "../constants";
 import TypewriterText from "../../components/common/TypewriterText";
 import Image from 'next/image';
+import ScrollButton from "./ScrollButton";
 
 const Home: React.FC = () => {
+
   return (
-    <div className="flex flex-col h-screen">
+    <div className="h-screen">
 
       {/* HERO BANNER AREA */}
       <div className="m-4 bg-primary-100 rounded-xl relative flex items-center justify-center text-center h-1/3 font-mono overflow-hidden">
@@ -27,6 +29,10 @@ const Home: React.FC = () => {
             <p className="text-sm md:text-md">
               { HERO_SPLASH }
             </p>
+          </div>
+
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2" >
+            <ScrollButton />
           </div>
         </div>
 
@@ -59,19 +65,32 @@ const Home: React.FC = () => {
       </div>
 
       {/* CHATBOX */}
-      <div className="m-4 md:mx-64 h-[calc(100vh-50%)] relative">
+      <div className="m-4 h-[calc(100vh-54%)] md:mx-64 md:h-[calc(100vh-45%)] relative">
 
         {/* desktop chatbox */}
-        <div className="hidden md:block">
-          <Image src="/assets/chatbox-desktop.svg" alt="Discribe example within chatbox" layout='fill' objectFit='contain' />
+        <div className="hidden md:block relative w-full h-full">
+          <Image src="/assets/chatbox-desktop.svg" alt="Discribe example within chatbox" placeholder="empty" fill priority />
         </div>
 
         {/* mobile chatbox */}
-        <div className="block md:hidden">
-          <Image src="/assets/chatbox-mobile.svg" alt="Discribe example within chatbox" layout='fill' objectFit='contain' />
+        <div className="block md:hidden relative w-full h-full">
+          <Image src="/assets/chatbox-mobile.svg" alt="Discribe example within chatbox" placeholder="empty" fill priority />
         </div>
       </div>
 
+      {/* ABOUT */}
+      <div className="m-4 md:mx-32 font-mono">
+        <h1 className="text-2xl font-mono">About</h1>
+        <p><b>Discribe</b>, your chatty sidekick in the world of Discord! 🤖</p>
+        <br />
+        <p>Tired of straining your ears to catch every hilarious punchline or epic gaming strategy shared in those voice chats? Or perhaps you're a word lover who thrives on the written word and wants to join in on the conversation? Well, fret not, because Discribe is here to save the day! 🦸‍♂️</p>
+        <br />
+        <p>🚀 Discribe isn't just any old transcription service – it's a speedy genius! Say goodbye to long waiting times and hello to instant results. With Discribe, those voice messages will be transcribed quicker than you can say "supercalifragilisticexpialidocious" (and yes, it'll transcribe that too!). ⚡️</p>
+        <br />
+        <p>🌈 Discribe is designed with love and accessibility in mind. For our friends who might not be able to hear voice messages, or simply prefer reading, Discribe is the ultimate bridge between the spoken and the written word.</p>
+        <br />
+        <p>Using Discribe is as easy as pie. Just invite our bot to your server, and it'll be at your service, ready to transform voice messages into text treasures.</p>
+      </div>
     </div>
   );
 };
