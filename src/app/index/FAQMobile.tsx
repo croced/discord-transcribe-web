@@ -19,14 +19,14 @@ const FAQMobile: React.FC = () => {
   return (
     <div className="block md:hidden">
       <div className="m-4 pb-4 font-mono">
-        <h1 className="mb-4 text-xl font-mono">Frequently asked questions</h1>
-        <div className="flex flex-col gap-y-2">
+        <h1 className="mb-4 text-xl font-mono text-sunset-start">Frequently asked questions</h1>
+        <div className="flex flex-col gap-y-4">
           {FAQ_CONTENT.map((item, index) => (
             <div key={`question-m${index}`}>
               <div
                 className={clsx(
-                  "p-4 bg-primary-100 rounded-xl flex flex-grow items-center cursor-pointer",
-                  { underline: index === selectedQuestion }
+                  "flex flex-grow items-center cursor-pointer",
+                  { 'text-transparent bg-clip-text bg-gradient-to-r from-sunset-start to-sunset-end inline-block': index === selectedQuestion }
                 )}
                 onClick={() => handleFAQClick(index)}
               >
@@ -46,11 +46,11 @@ const FAQMobile: React.FC = () => {
               </div>
               <div
                 className={clsx(
-                  "px-4 transition-max-h duration-300 overflow-hidden",
+                  "transition-max-h duration-300 overflow-hidden",
                   { "max-h-0": index !== selectedQuestion }
                 )}
               >
-                <p>{FAQ_CONTENT[selectedQuestion || 0].answer}</p>
+                <p className="mt-4">{FAQ_CONTENT[selectedQuestion || 0].answer}</p>
               </div>
             </div>
           ))}

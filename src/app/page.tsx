@@ -94,7 +94,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* FEATURES */}
-      <div className="mx-4 my-16 md:mx-64 flex flex-col gap-y-4 md:gap-y-0 justify-between font-mono">
+      <div className="mx-4 my-8 md:mx-32 md:my-16 flex flex-col gap-y-4 md:gap-y-0 justify-between font-mono">
         <div className="flex md:flex-row flex-col gap-y-4 gap-x-8 w-full">
           <div className="box-content flex flex-row  items-start md:w-1/2 rounded-xl p-4">
             <Image src="/assets/icons/community.svg" alt="Community icon" width={80} height={80} className="mr-4" aria-hidden />
