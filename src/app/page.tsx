@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BACKDROP_WORDS, HERO_SPLASH, SIGN_IN_HINT } from "./constants";
+import { HERO_SPLASH, SIGN_IN_HINT } from "./constants";
 import TypewriterText from "../../components/common/TypewriterText";
 import Image from 'next/image';
 
