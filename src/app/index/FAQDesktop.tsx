@@ -27,7 +27,7 @@ const FAQDesktop: React.FC = () => {
           </div>
 
           <div className="w-full h-fit">
-            <h1 className="text-xl">
+            <h1 className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-sunset-start to-sunset-end inline-block">
               {FAQ_CONTENT[selectedQuestion].question}
             </h1>
             <p className="mt-2 text-sm">
