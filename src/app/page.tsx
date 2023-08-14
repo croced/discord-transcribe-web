@@ -102,7 +102,7 @@ const Home: React.FC = () => {
               <h1 className="text-xl text-sunset-start">
                 Free for communities
               </h1>
-              <p>Transcribe the chatter for free! Discribe is your community&apos;s chat companion, offering lightning-fast voice-to-text transcription without costing a coin. Whether you're part of a gaming guild, study group, or fan forum, enjoy the power of transcription at no cost for servers under 100 users.</p>
+              <p>Transcribe the chatter for free! Discribe is your community&apos;s chat companion, offering lightning-fast voice-to-text transcription without costing a coin. Whether you&apos;re part of a gaming guild, study group, or fan forum, enjoy the power of transcription at no cost for servers under 100 users.</p>
             </div>
           </div>
           <div className="box-content flex flex-row items-start md:w-1/2 rounded-xl p-4">
@@ -122,7 +122,7 @@ const Home: React.FC = () => {
               <h1 className="text-xl text-sunset-start">
                 Highly configurable
               </h1>
-              <p>Make Discribe yours! Customize settings for both server and user preferences, and enjoy a transcription service that speaks your language. It's transcription, your way.</p>
+              <p>Make Discribe yours! Customize settings for both server and user preferences, and enjoy a transcription service that speaks your language. It&apos;s transcription, your way.</p>
             </div>
           </div>
           <div className="box-content flex flex-row items-start md:w-1/2 rounded-xl p-4">
