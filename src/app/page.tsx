@@ -3,6 +3,8 @@ import { HERO_SPLASH, SIGN_IN_HINT } from "../constants";
 import TypewriterText from "../../components/common/TypewriterText";
 import Image from 'next/image';
 import ScrollButton from "./ScrollButton";
+import FAQDesktop from "./index/FAQDesktop";
+import FAQMobile from "./index/FAQMobile";
 
 const Home: React.FC = () => {
 
@@ -80,10 +82,9 @@ const Home: React.FC = () => {
 
       {/* ABOUT */}
       <div className="m-4 md:mx-32 font-mono">
-        <h1 className="text-2xl font-mono">About</h1>
+        <h1 className="text-2xl text-sunset-start">About</h1>
         <p><b>Discribe</b>, your chatty sidekick in the world of Discord! 🤖</p>
-        <br />
-        <p>Tired of straining your ears to catch every hilarious punchline or epic gaming strategy shared in those voice chats? Or perhaps you&apos;re a word lover who thrives on the written word and wants to join in on the conversation? Well, fret not, because Discribe is here to save the day! 🦸‍♂️</p>
+        <p>Tired of straining your ears to catch every hilarious punchline or epic gaming strategy shared in chat? Well, fret not, because Discribe is here to save the day!</p>
         <br />
         <p>🚀 Discribe isn&apos;t just any old transcription service – it&apos;s a speedy genius! Say goodbye to long waiting times and hello to instant results. With Discribe, those voice messages will be transcribed quicker than you can say &quot;supercalifragilisticexpialidocious&quot; (and yes, it&apos;ll transcribe that too!).</p>
         <br />
@@ -91,6 +92,59 @@ const Home: React.FC = () => {
         <br />
         <p>Using Discribe is as easy as pie. Just invite our bot to your server, and it&apos;ll be at your service, ready to transform voice messages into text treasures.</p>
       </div>
+
+      {/* FEATURES */}
+      <div className="mx-4 my-16 md:mx-64 flex flex-col gap-y-4 md:gap-y-0 justify-between font-mono">
+        <div className="flex md:flex-row flex-col gap-y-4 gap-x-8 w-full">
+          <div className="box-content flex flex-row  items-start md:w-1/2 rounded-xl p-4">
+            <Image src="/assets/icons/community.svg" alt="Community icon" width={80} height={80} className="mr-4" aria-hidden />
+            <div className="flex flex-col flex-grow md:flex-grow-0">
+              <h1 className="text-xl text-sunset-start">
+                Free for communities
+              </h1>
+              <p>Transcribe the chatter for free! Discribe is your community&apos;s chat companion, offering lightning-fast voice-to-text transcription without costing a coin. Whether you're part of a gaming guild, study group, or fan forum, enjoy the power of transcription at no cost for servers under 100 users.</p>
+            </div>
+          </div>
+          <div className="box-content flex flex-row items-start md:w-1/2 rounded-xl p-4">
+            <Image src="/assets/icons/lightning.svg" alt="Lightning icon" width={80} height={80} className="mr-4" aria-hidden />
+            <div className="flex flex-col flex-grow md:flex-grow-0">
+              <h1 className="text-xl text-sunset-start">
+                Lightning fast
+              </h1>
+              <p>In the blink of an eye, Discribe transforms voice messages into text treasures. Experience a swift and seamless transcription process that keeps up with your conversations. No more waiting – it&apos;s transcription at the speed of thought!</p>
+            </div>
+          </div>
+        </div>
+        <div className="md:mt-4 flex md:flex-row flex-col gap-y-4 gap-x-8 w-full">
+        <div className="box-content flex flex-row items-start md:w-1/2 rounded-xl p-4">
+            <Image src="/assets/icons/config.svg" alt="Config icon" width={80} height={80} className="mr-4" aria-hidden />
+            <div className="flex flex-col flex-grow md:flex-grow-0">
+              <h1 className="text-xl text-sunset-start">
+                Highly configurable
+              </h1>
+              <p>Make Discribe yours! Customize settings for both server and user preferences, and enjoy a transcription service that speaks your language. It's transcription, your way.</p>
+            </div>
+          </div>
+          <div className="box-content flex flex-row items-start md:w-1/2 rounded-xl p-4">
+            <Image src="/assets/icons/microphone.svg" alt="Microphone icon" width={80} height={80} className="mr-4" aria-hidden />
+            <div className="flex flex-col flex-grow md:flex-grow-0">
+              <h1 className="text-xl text-sunset-start">
+                Real-time transcription
+              </h1>
+              <p>(coming soon)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="hidden md:block">
+        <FAQDesktop />
+      </div>
+      <div className="block md:hidden">
+        <FAQMobile />
+      </div>
+
     </div>
   );
 };
