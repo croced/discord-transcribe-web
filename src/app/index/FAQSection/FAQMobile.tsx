@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import React, { useState } from "react";
-import { FAQ_CONTENT } from "../../constants";
+import { FAQ_CONTENT } from "../../../constants";
 import Image from "next/image";
 
 const FAQMobile: React.FC = () => {
@@ -19,7 +19,7 @@ const FAQMobile: React.FC = () => {
   return (
     <div className="block md:hidden">
       <div className="m-4 pb-4 font-mono">
-        <h1 className="mb-4 text-xl font-mono text-sunset-start">Frequently asked questions</h1>
+        <h1 className="mb-4 text-xl font-mono text-sunset-start font-semibold">Frequently asked questions</h1>
         <div className="flex flex-col gap-y-4">
           {FAQ_CONTENT.map((item, index) => (
             <div key={`question-m${index}`}>
