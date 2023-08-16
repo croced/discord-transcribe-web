@@ -4,7 +4,7 @@ import Image from "next/image";
 const ChatboxSection: React.FC = () => {
   return (
     <>
-      <div className="m-4 h-[calc(100vh-54%)] md:mx-64 md:h-[calc(100vh-45%)] relative">
+      <div className="m-4 h-[calc(100vh-54%)] md:mx-32 md:h-[calc(100vh-45%)] relative">
         {/* desktop chatbox */}
         <div className="hidden md:block relative w-full h-full">
           <Image

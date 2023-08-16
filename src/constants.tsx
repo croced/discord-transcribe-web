@@ -7,19 +7,19 @@ export const FEATURES_CONTENT = [
   {
     title: "Free for communities",
     description:
-      "Transcribe the chatter for free! Discribe is your community's chat companion, offering lightning-fast voice-to-text transcription without costing a coin. Whether you're part of a gaming guild, study group, or fan forum, enjoy the power of transcription at no cost for servers under 100 users.",
+      "Transcribe the chatter for free! Discribe is your community's chat companion, offering lightning-fast voice-to-text transcription without costing a coin for small servers.",
     image: "icons/community.svg",
   },
   {
     title: "Lightning fast",
     description:
-      "In the blink of an eye, Discribe transforms voice messages into text treasures. Experience a swift and seamless transcription process that keeps up with your conversations. No more waiting – it's transcription at the speed of thought!",
+      "Experience a swift and seamless transcription process that keeps up with your conversations. It's transcription at the speed of thought!",
     image: "icons/lightning.svg",
   },
   {
     title: "Highly configurable",
     description:
-      "Make Discribe yours! Customize settings for both server and user preferences, and enjoy a transcription service that speaks your language. It's transcription, your way.",
+      "Customize settings for both server and user preferences, and enjoy a transcription service that speaks your language. It's transcription, your way.",
     image: "icons/config.svg",
   },
   {
@@ -31,7 +31,7 @@ export const FEATURES_CONTENT = [
 
 export const FAQ_CONTENT = [
   {
-    question: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+    question: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit? Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     answer:
       "1 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
   },
