@@ -77,7 +77,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ data, glowFrom }) => {
         }}
       />
 
-      <div className="flex flex-col flex-grow md:flex-grow-0 p-8">
+      <div className="flex flex-col flex-grow md:flex-grow-0 p-4">
         <h1 className="text-xl font-mono flex flex-row">
           {data.image && (
             <Image
