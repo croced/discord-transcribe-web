@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import clsx from "clsx";
 
 type FeatureCardData = {
   title: string;
@@ -11,9 +12,10 @@ type FeatureCardData = {
 
 type FeatureCardProps = {
   data: FeatureCardData;
+  glowFrom?: { x: number; y: number } | null;
 };
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ data }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({ data, glowFrom }) => {
   const divRef = useRef<HTMLDivElement>(null);
   const [isFocused, setIsFocused] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -27,6 +29,10 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ data }) => {
 
     setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
   };
+
+  useEffect(() => {
+    console.log("position", position);
+  }, [position]);
 
   const handleFocus = () => {
     setIsFocused(true);
@@ -54,13 +60,20 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ data }) => {
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="group relative box-content flex flex-row items-start md:w-1/2 rounded-xl border-2 border-sunset-start/10 bg-gradient-to-r from-sunset-start/5 to-sunset-end/5 hover:from-sunset-start/10 hover:to-sunset-start/10 overflow-hidden"
+      className="group relative box-content flex flex-row  items-start md:w-1/2 rounded-xl border-2 border-sunset-start/10 p-8 bg-gradient-to-r from-sunset-start/5 to-sunset-end/5 overflow-hidden shadow-xl"
     >
       <div
-        className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 w-full h-full"
+        className={clsx(
+          "pointer-events-none absolute -inset-px transition duration-300 w-full h-full",
+          { "opacity-0": !glowFrom }
+        )}
         style={{
-          opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(240,228,118,0.1) 0%, rgba(255,113,205,0.05) 25%, transparent 40%)`,
+          opacity: !glowFrom ? opacity : 1,
+          background: `radial-gradient(600px circle at ${
+            glowFrom ? glowFrom.x : position.x
+          }px ${
+            glowFrom ? glowFrom.y : position.y
+          }px, rgba(240,228,118,0.1) 0%, rgba(255,113,205,0.05) 25%, transparent 40%)`,
         }}
       />
 

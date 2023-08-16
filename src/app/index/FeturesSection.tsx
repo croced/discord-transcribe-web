@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import { FEATURES_CONTENT } from "../../constants";
-import FeatureCard from "../../../components/common/FeatureCard";
+import FeatureCard from "../../components/common/FeatureCard";
 
 const Features: React.FC = () => {
   return (

@@ -1,7 +1,6 @@
 import React from "react";
 import { HERO_SPLASH, SIGN_IN_HINT } from "../constants";
-import TypewriterText from "../../components/common/TypewriterText";
-import Image from "next/image";
+import TypewriterText from "../components/common/TypewriterText";
 import ScrollButton from "./ScrollButton";
 import Features from "./index/FeturesSection";
 import FAQSection from "./index/FAQSection";
