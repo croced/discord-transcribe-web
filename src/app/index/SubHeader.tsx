@@ -50,7 +50,7 @@ const SubHeader: React.FC = () => {
           {SIGN_IN_HINT}
         </p>
         <div
-          className="flex flex-grow md:flex-grow-0 justify-between rounded-3xl hover:cursor-pointer bg-primary-100 hover:bg-primary-50"
+          className="flex flex-grow md:flex-grow-0 justify-between rounded-3xl hover:cursor-pointer bg-primary-100 hover:bg-primary-50 transition-colors duration-300 ease-in-out"
           onClick={handleSignIn}
         >
           <a className="flex flex-grow md:flex-grow-0 items-center justify-center py-2 px-8 text-xs md:text-sm">
@@ -75,7 +75,7 @@ const SubHeader: React.FC = () => {
           Hello, {session.user.user_metadata.full_name} 👋
         </p>
         <div
-          className="flex flex-grow md:flex-grow-0 justify-between rounded-3xl hover:cursor-pointer bg-primary-100 hover:bg-primary-50"
+          className="flex flex-grow md:flex-grow-0 justify-between rounded-3xl hover:cursor-pointer bg-primary-100 hover:bg-primary-50 transition-colors duration-300 ease-in-out"
           onClick={handleSignOut}
         >
           <a className="flex flex-grow md:flex-grow-0 items-center justify-center py-2 px-8 text-xs md:text-sm">
@@ -97,7 +97,7 @@ const SubHeader: React.FC = () => {
     <>
       {/* SUB-HEADER AREA */}
       <div className="mx-4 h-[5%] flex gap-x-2 justify-between items-center font-mono">
-        <div className="flex flex-grow md:flex-grow-0 justify-between rounded-3xl hover:cursor-pointer bg-primary-100 hover:bg-primary-50">
+        <div className="flex flex-grow md:flex-grow-0 justify-between rounded-3xl hover:cursor-pointer bg-primary-100 hover:bg-primary-50 transition-colors duration-300 ease-in-out">
           <a className="flex flex-grow md:flex-grow-0 items-center justify-center py-2 px-8  text-xs md:text-sm">
             <Image
               src="/assets/icons/documentation.svg"
