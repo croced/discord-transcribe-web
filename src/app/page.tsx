@@ -7,9 +7,6 @@ import FAQSection from "./index/FAQSection";
 import AboutSection from "./index/AboutSection";
 import ChatboxSection from "./index/ChatboxSection";
 import SubHeader from "./index/SubHeader";
-import { supabase } from "@/util/supabase";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { Session } from "@supabase/supabase-js";
 
 export default function Home() {
   return (

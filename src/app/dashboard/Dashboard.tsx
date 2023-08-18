@@ -4,7 +4,9 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
 export default async function Dashboard() {
-	const supabase = createServerComponentClient<Database>({ cookies });
+    const cookieStore = cookies();
+
+	const supabase = createServerComponentClient<Database>({ cookies: () => cookieStore });
 
 	const {
 		data: { session }
