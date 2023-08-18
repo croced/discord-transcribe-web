@@ -1,22 +1,20 @@
-import { Database } from '@/lib/database.types';
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
-import { cookies } from 'next/headers';
-import { redirect } from 'next/navigation';
+import { Database } from "@/lib/database.types";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 
 export default async function Dashboard() {
-    const cookieStore = cookies();
+  const cookieStore = cookies();
 
-	const supabase = createServerComponentClient<Database>({ cookies: () => cookieStore });
+  const supabase = createServerComponentClient<Database>({
+    cookies: () => cookieStore,
+  });
 
-	const {
-		data: { session }
-	} = await supabase.auth.getSession();
+  const { data } = await supabase.auth.getSession();
 
-	if (!session) {
-		redirect('/');
-	}
+  if (!data?.session) {
+    redirect("/");
+  }
 
-	const { data } = await supabase.from('posts').select('*');
-
-	return <pre>{JSON.stringify({ data }, null, 2)}</pre>;
+  return <pre>{JSON.stringify({ data }, null, 2)}</pre>;
 }
