@@ -52,5 +52,26 @@
     max-width: 100%;
     z-index: 10;
   }
+
+  .loading-bar-container {
+    background-color: transparent;
+    overflow: hidden;
+  }
   
+  .loading-bar {
+    height: 2px;
+    width: 50%;
+    background-color: rgba(255,255,255,0.3);
+    animation: loading 2s ease-in 0s infinite;
+  }
+  
+  @keyframes loading {
+    0% {
+     transform:translateX(-100%)
+    }
+    to {
+     transform:translateX(300%)
+    }
+   }
+
 }

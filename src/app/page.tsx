@@ -7,8 +7,11 @@ import FAQSection from "./index/FAQSection";
 import AboutSection from "./index/AboutSection";
 import ChatboxSection from "./index/ChatboxSection";
 import SubHeader from "./index/SubHeader";
+import { supabase } from "@/util/supabase";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import { Session } from "@supabase/supabase-js";
 
-const Home: React.FC = () => {
+export default function Home() {
   return (
     <div className="h-screen">
       {/* HERO BANNER AREA */}
@@ -59,6 +62,4 @@ const Home: React.FC = () => {
       <FAQSection />
     </div>
   );
-};
-
-export default Home;
+}

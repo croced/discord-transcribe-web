@@ -39,6 +39,7 @@ const FAQSection: React.FC = () => {
                   alt={index === selectedQuestion ? "Collapse" : "Expand"}
                   width={12}
                   height={12}
+                  style={{ width: 12, height: 12 }} // necessary to shut nextjs warnings up
                   className="mx-4"
                   aria-hidden
                 />

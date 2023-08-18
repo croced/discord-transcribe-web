@@ -30,10 +30,6 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ data, glowFrom }) => {
     setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
   };
 
-  useEffect(() => {
-    console.log("position", position);
-  }, [position]);
-
   const handleFocus = () => {
     setIsFocused(true);
     setOpacity(1);
@@ -85,6 +81,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ data, glowFrom }) => {
               alt="Community icon"
               width={24}
               height={24}
+              style={{width: 24, height: 24}} // necessary to shut nextjs warnings up
               className="mr-2"
               aria-hidden
             />
