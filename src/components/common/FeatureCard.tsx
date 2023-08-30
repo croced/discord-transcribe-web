@@ -88,7 +88,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ data, glowFrom }) => {
           )}
           {data.title}
         </h1>
-        <p className="text-white/60 mt-4">{data.description}</p>
+        <p className="text-semiOpaque mt-4">{data.description}</p>
       </div>
     </div>
   );

@@ -53,7 +53,7 @@ const FAQSection: React.FC = () => {
                 )}
               >
                 <p
-                  className="mb-6 md:mb-8 text-white/60"
+                  className="mb-6 md:mb-8 text-semiOpaque"
                   aria-expanded={index === selectedQuestion}
                 >
                   {FAQ_CONTENT[selectedQuestion || 0].answer}

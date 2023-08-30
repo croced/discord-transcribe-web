@@ -20,6 +20,7 @@ const config: Config = {
           start: "#F0E476",
           end: "#FF71CD",
         },
+        semiOpaque: 'rgba(255 255 255/0.6)'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

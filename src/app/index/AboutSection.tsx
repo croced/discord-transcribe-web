@@ -6,7 +6,7 @@ const AboutSection: React.FC = () => {
       <h1 className="text-2xl text-sunset-start font-mono font-semibold">
         About
       </h1>
-      <div className="text-white/80">
+      <div className="text-semiOpaque">
         <p>
           <b>Discribe</b>, your chatty sidekick in the world of Discord!
         </p>

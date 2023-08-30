@@ -1,20 +1,20 @@
-import { Database } from "@/lib/database.types";
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+"use client";
+import { Session } from "@supabase/auth-helpers-nextjs";
+import UserMenu from "./components/UserMenu";
 
-export default async function Dashboard() {
-  const cookieStore = cookies();
+interface DashboardProps {
+  session: Session;
+}
 
-  const supabase = createServerComponentClient<Database>({
-    cookies: () => cookieStore,
-  });
 
-  const { data } = await supabase.auth.getSession();
+export default function Dashboard({ session }: DashboardProps) {
+  if (!session) return <div>Loading...</div>;
 
-  if (!data?.session) {
-    redirect("/");
-  }
-
-  return <pre>{JSON.stringify({ data }, null, 2)}</pre>;
+  return (
+    <div className="w-full mt-4">
+      <div className="mt-4">
+        <UserMenu user={session.user} />
+      </div>
+    </div>
+  );
 }
