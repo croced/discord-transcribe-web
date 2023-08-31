@@ -56,7 +56,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ data, glowFrom }) => {
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="group relative box-content flex flex-row  items-start md:w-1/2 rounded-xl border-2 border-sunset-start/10 p-8 bg-gradient-to-r from-sunset-start/5 to-sunset-end/5 overflow-hidden shadow-xl"
+      className="group relative box-content flex flex-row items-start md:w-1/2 rounded-xl border-2 border-sunset-start/10 p-8 bg-gradient-to-r from-sunset-start/5 to-sunset-end/5 overflow-hidden shadow-xl"
     >
       <div
         className={clsx(
