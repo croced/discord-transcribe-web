@@ -46,7 +46,7 @@ const FAQSection: React.FC = () => {
               </div>
               <div
                 className={clsx(
-                  "transition-max-h duration-300 overflow-hidden",
+                  "overflow-hidden",
                   {
                     "max-h-0": index !== selectedQuestion,
                   }

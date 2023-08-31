@@ -78,7 +78,6 @@ export default function UserMenu({ user }: Props) {
               <Avatar.Fallback className="text-primary-100 leading-1 flex h-full w-full items-center justify-center bg-gradient-to-br from-sunset-start to-sunset-end text-[15px] font-medium"></Avatar.Fallback>
             </Avatar.Root>
             <div className="flex-1">
-              <div className="">
                 <p className="font-medium">{parsedUsername?.user_name}</p>
                 <div className="grid grid-cols-3 gap-4 text-semiOpaque">
                   <p>{`#${parsedUsername?.id}`}</p>
@@ -89,7 +88,6 @@ export default function UserMenu({ user }: Props) {
                     <p>Sign out</p>
                     <ExitIcon className="ml-2" />
                   </div>
-                </div>
               </div>
             </div>
           </div>
